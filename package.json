@@ -1,0 +1,13 @@
+{
+  "name": "ng2-firebase-howto",
+  "version": "0.0.1",
+  "author": {
+    "name": "Rachel Willmer",
+    "email": "rachel@willmer.org"
+  },
+  "homepage": "https://github.com/rwillmer/ng2-firebase-step-by-step",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rwillmer/ng2-firebase-step-by-step"
+  }
+}
