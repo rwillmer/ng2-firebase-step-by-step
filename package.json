@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-protractor": "^1.0.0",
     "protractor": "^2.5.1"
   }
 }
