@@ -9,5 +9,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/rwillmer/ng2-firebase-step-by-step"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
   }
 }
