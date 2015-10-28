@@ -1,5 +1,17 @@
 <html>
+<head>
+   <script src="https://code.angularjs.org/tools/system.js"></script>
+   <script src="https://code.angularjs.org/tools/typescript.js"></script>
+   <script src="https://code.angularjs.org/2.0.0-alpha.44/angular2.dev.js"></script>
+</head>
 <body>
-    <h1 id='h1'>Hello World!</h1>
+    <script>
+        System.config({
+            transpiler: 'typescript',
+            typescriptOptions: { emitDecoratorMetadata: true }
+        });
+        System.import('./helloworld.ts');
+    </script>
+    <helloworld>loading...</helloworld>
 </body>
 </html>
