@@ -3,16 +3,21 @@ var protractor = require("gulp-protractor").protractor;
 var protractor_conf = require('./e2e-tests/protractor.conf');
 var browserSync = require('browser-sync');
 
+var config = {
+  baseDir: 'app'
+};
+
+
 gulp.task('default', function() {
   // place code for your default task here
 });
 
-gulp.task('e2e-test', function() {
+gulp.task('e2e-test', ['e2e-install'], function() {
 
     var bs = browserSync.create();
     bs.init({
         server: {
-            baseDir: "src/client"
+            baseDir: config.baseDir
         },
         open: false
     });
@@ -32,12 +37,18 @@ gulp.task('e2e-test', function() {
 
 });
 
+gulp.task('e2e-install', function() {
+  var exec = require('child_process').execSync;
+  exec('node_modules/protractor/bin/webdriver-manager update')
+});
+
+
 gulp.task('serve-dev', function() {
 
   /**
    * Run Browsersync with server config
    */
   browserSync({
-      server: "src/client",
+      server: config.baseDir,
   });
 });
