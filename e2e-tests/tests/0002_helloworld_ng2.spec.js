@@ -3,7 +3,7 @@
 describe('Hello World in HTML', function() {
 
     beforeAll(function() {
-        isAngularSite(false);
+        isAngularSite(true);
 
         browser.get('/');
     });
